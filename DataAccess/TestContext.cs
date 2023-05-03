@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-namespace DataAcess
+namespace DataAccess
 {
     public partial class TestContext : DbContext
     {

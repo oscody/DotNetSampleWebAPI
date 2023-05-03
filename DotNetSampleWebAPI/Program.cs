@@ -1,4 +1,5 @@
-using DataAcess;
+
+using DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,7 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DbConnectionString");
 
-builder.Services.AddDbContext<TestContext>(options => {
+builder.Services.AddDbContext<TestContext>(options =>
+{
     options.UseSqlServer(connectionString);
 
 });

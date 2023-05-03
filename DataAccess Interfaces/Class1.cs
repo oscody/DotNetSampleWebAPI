@@ -1,4 +1,4 @@
-﻿namespace DataAcess_Interface
+﻿namespace DataAccess_Interfaces
 {
     public class Class1
     {
