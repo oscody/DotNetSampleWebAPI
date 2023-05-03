@@ -1,4 +1,4 @@
-﻿namespace DataAccess
+﻿namespace DataAcess
 {
     public class Class1
     {
