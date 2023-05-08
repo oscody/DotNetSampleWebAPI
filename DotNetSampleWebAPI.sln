@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3BC3E8FA-D29E-40BE-AEBD-F55D87A07F8F}"
 	ProjectSection(SolutionItems) = preProject
 		DB Script.sql = DB Script.sql
+		sp_OBTestHello.sql = sp_OBTestHello.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{41C64628-797E-4DCB-BC25-E4D757102965}"
