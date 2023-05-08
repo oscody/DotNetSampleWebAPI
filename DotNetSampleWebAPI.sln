@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetSampleWebAPI", "DotNe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{F3449A1B-25C9-4231-A14A-532087542E3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess Interfaces", "DataAccess Interfaces\DataAccess Interfaces.csproj", "{4B77E301-9E51-49D7-B484-6449701FFA84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess Interfaces", "DataAccess Interfaces\DataAccess Interfaces.csproj", "{4B77E301-9E51-49D7-B484-6449701FFA84}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3BC3E8FA-D29E-40BE-AEBD-F55D87A07F8F}"
+	ProjectSection(SolutionItems) = preProject
+		DB Script.sql = DB Script.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
