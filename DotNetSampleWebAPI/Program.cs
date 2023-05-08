@@ -3,6 +3,8 @@
 using DataAccess;
 using DataAccess_Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Services;
+using Services_Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +18,11 @@ builder.Services.AddDbContext<TestContext>(options =>
 
 });
 
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(TestRepository<>));
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+//builder.Services.AddScoped<IProductsRepository, ProductRepository>();
+
+
+builder.Services.AddScoped<ITestService, TestService>();
 
 
 // Add services to the container.

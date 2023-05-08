@@ -1,7 +1,9 @@
 
 using DataAccess;
+using DataAccess.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Services_Interfaces;
 
 namespace DotNetSampleWebAPI.Controllers
 {
@@ -10,13 +12,14 @@ namespace DotNetSampleWebAPI.Controllers
     public class TestController : ControllerBase
     {
         private readonly ILogger<TestController> _logger;
-
+        private readonly ITestService TestService;
         private readonly TestContext _context;
 
-        public TestController(ILogger<TestController> logger, TestContext context)
+        public TestController(ILogger<TestController> logger, ITestService testService, TestContext context)
         {
             _logger = logger;
-            _context = context;
+            this.TestService = testService;
+            this._context = context;
         }
 
         [HttpGet]
@@ -25,6 +28,22 @@ namespace DotNetSampleWebAPI.Controllers
 
             var response = _context.GenericModel.FromSql($"select Name from Products").ToList();
             return Ok(response);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<Product>> GetProducts()
+        {
+            var d = await TestService.GetProduct(1);
+            return Ok(d);
+        }
+
+
+        public void TestSp() {
+
+
+            //var response = _context.GenericModel.FromSql($"select Name from Products").ToList();
+            //return Ok(response);
+
         }
     }
 }
