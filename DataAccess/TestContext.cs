@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DataAccess.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
 namespace DataAccess
@@ -9,7 +10,7 @@ namespace DataAccess
         {
         }
 
-        public virtual DbSet<String> GenericModel { get; set; }
+        public virtual DbSet<GenericModel> GenericModel { get; set; }
 
     }
 }
