@@ -1,6 +1,7 @@
 
 
 using DataAccess;
+using DataAccess_Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,9 @@ builder.Services.AddDbContext<TestContext>(options =>
     options.UseSqlServer(connectionString);
 
 });
+
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(TestRepository<>));
+
 
 // Add services to the container.
 
