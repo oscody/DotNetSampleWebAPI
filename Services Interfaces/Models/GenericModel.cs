@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Models
+namespace Services_Interfaces.Models
 {
     [Keyless]
     public class GenericModel
     {
-        public String? Name { get; set; }
+        public string? Name { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using DataAccess_Interfaces;
-using DataAccess.Models;
 using Services_Interfaces;
+using Services_Interfaces.Models;
 
 namespace Services
 {
@@ -16,7 +16,14 @@ namespace Services
         public async Task<Product> GetProduct(int? id)
         { 
             var product = await productsRepository.GetAsync(id);
-            return product;
+            var svcProduct = new Services_Interfaces.Models.Product()
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description, 
+                Price = product.Price  
+            };
+            return svcProduct;
         }
 
 

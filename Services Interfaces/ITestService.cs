@@ -1,4 +1,4 @@
-﻿using DataAccess.Models;
+﻿using Services_Interfaces.Models;
 
 namespace Services_Interfaces
 {

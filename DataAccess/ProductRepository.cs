@@ -1,5 +1,4 @@
-﻿using DataAccess.Models;
-using DataAccess_Interfaces;
+﻿using DataAccess_Interfaces.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess
@@ -7,8 +6,6 @@ namespace DataAccess
     public class ProductRepository : GenericRepository<Product>
     {
         TestContext Context { get; set; }
-
-        Func<TestContext> NewReadContext { get; set; }
 
         public ProductRepository(TestContext context) : base(context)
         {
@@ -23,13 +20,10 @@ namespace DataAccess
 
         //public IEnumerable<T> GetData<T>() where T : class
         //{
+        //    //return this.Context.GenericModel.FromSqlRaw($"EXEC dbo.OBTestHello").ToList();
 
-        //    //using (TestContext context = NewReadContext())
-        //    //{
-        //    //    return context.Ge.Set<T>().FromSqlRaw($"EXEC dbo.OBTestHello").ToList();
-        //    //}
+        //        //return Context.GenericModel.FromSqlRaw($"EXEC dbo.OBTestHello").ToList();
 
-        //    throw new NotImplementedException();
         //}
 
     }

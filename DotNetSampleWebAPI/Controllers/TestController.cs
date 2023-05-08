@@ -1,9 +1,9 @@
 
 using DataAccess;
-using DataAccess.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Services_Interfaces;
+using Services_Interfaces.Models;
 
 namespace DotNetSampleWebAPI.Controllers
 {
@@ -41,8 +41,8 @@ namespace DotNetSampleWebAPI.Controllers
         public void TestSp() {
 
 
-            //var response = _context.GenericModel.FromSql($"select Name from Products").ToList();
-            //return Ok(response);
+            var response = _context.GenericModel.FromSql($"select Name from Products").ToList();
+            ///return Ok(response);
 
         }
     }
