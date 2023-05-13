@@ -12,19 +12,11 @@ namespace DataAccess
             this.Context = context;
         }
 
-        //internal ProductRepository(TestContext context, Func<TestContext> newReadContext)
-        //{
-        //    this.Context = context;
-        //    this.NewReadContext = newReadContext;
-        //}
+        public void GetData()
+        {
+            Context.Database.FromSqlRaw($"EXEC dbo.OBTestHello").ToList();
+        }
 
-        //public IEnumerable<T> GetData<T>() where T : class
-        //{
-        //    //return this.Context.GenericModel.FromSqlRaw($"EXEC dbo.OBTestHello").ToList();
-
-        //        //return Context.GenericModel.FromSqlRaw($"EXEC dbo.OBTestHello").ToList();
-
-        //}
 
     }
 }

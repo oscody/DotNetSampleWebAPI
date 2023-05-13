@@ -15,5 +15,10 @@ namespace DataAccess
 
         public virtual DbSet<User> Users { get; set; }
 
+        public void GetData()
+        {
+            Database.FromSqlRaw($"EXEC dbo.OBTestHello").ToList();
+        }
+
     }
 }
